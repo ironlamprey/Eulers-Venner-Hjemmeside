@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="da" id="euler">
+<head>
+	<meta charset="utf-8" />
+	<link rel="stylesheet" href="font.css" type="text/css" charset="utf-8" />
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css" integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq" crossorigin="anonymous">
+	<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js" integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz" crossorigin="anonymous"></script>
+	<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="HandheldFriendly" content="true">
+	<title>Eulers Venner</title>
+	<style>
+		body {
+			font-family: 'cmu_serifroman';
+			background-color: #FFFD38;
+			padding-top: 4em;
+		}
+
+		h1, h2, h3 {
+			display: inline;
+		}
+
+		p {
+			font-size: 1.2em;
+		}
+
+		#logo {
+			position: relative;
+			left: 10%;
+			width: 80%;
+		}
+
+		#content {
+			position: relative;
+			left: 15%;
+			width: 75%;
+			/*border: thin solid #000;*/
+		}
+
+		.boardmember {
+			display: inline-grid;
+			width: 19em;;
+			padding: 0.5em;
+			/*border: thin solid #000;*/
+		}
+
+		.katex { font-size: 1em !important; } 
+	</style>
+	<script>
+		function init() {
+			var kc = false;
+			var keys = "";
+
+			document.body.addEventListener("keydown", event => {
+	  			keys += event.keyCode.toString();
+	  			
+	  			if (!kc && keys.endsWith("38384040373937396665")) {
+	  				fun();
+	  				kc = true;
+	  			}
+			});
+
+			function fun() {
+				var elements = new Array(...document.getElementsByTagName("h1"),
+					                     ...document.getElementsByTagName("p"));
+	  			for (var element of elements) {
+	  				var text = element.innerText;
+	  				element.innerText = text.split("").map(x => 
+	  					Math.random() >= 0.9999 ? (x + x) : x).join("");
+	  			}
+	  			setTimeout(fun, 1/60);
+			}
+		}
+	</script>
+</head>
+<body onload="init()">
+<img id="logo" src="logo3.svg" alt="Eulers Venner" title="Eulers Venner" />
+<!--
+<<p>Velkommen til Eulers venners nye hjemmeside! Man kan nu skrive matematik:</p>
+$$
+	f(x) = \sum_{n=0}^{\infty} \frac{x^n}{n!}
+$$
+<p>Dette er takket være \(\KaTeX\)! Her er noget mere:</p>
+$$
+	\zeta(s) = \sum_{n=1}^{\infty} n^{-s}, \quad \zeta(-1) = -\frac{1}{12}.\\
+
+	\sin(x) = x
+	$$> -->
+
+<div id="content">
+	<p><b>Eulers Venner</b> er en forening for matematikere ved Institut for Matematik, Aarhus Universitet.</p>
+	<p>Vi afholder spændende foredrag med diverse forelæsere \(n\) gange hvert semester, hvor \(2 \leq n < \infty\). Desuden afholder vi bl.a. også en årlig studietur, en cykeltur og filmaftener (Eulergraf!)</p>
+	<h1>Arrangementer</h1>
+	<p><a href="prev.html">Tidligere foredrag </a></p>
+	<!--
+	<p>&raquo; Foredrag med Ivan Damgård, d. 22 oktober 2019: <i>Noget om kvantecomputere.</i> <a href="some.pdf">Plakat</a>. <a href="https://www.facebook.com/events/955537084782803/">Facebook</a>.</p>
+	<p>&raquo; Foredrag med Andrew Swann, d. 12 november 2019: <i>Sikkert noget om geometri.</i> <a href="some.pdf">Plakat</a>. <a href="fb.com">Facebook</a>.</p>
+ -->
+	<!--<h1>Riemanns nulpunkter</h1>
+	<p>Riemanns \(\zeta\)-funktion er en meromorf funktion på \(\mathbb{C}\) med en simpel pol i punktet \(s = 1\). På halvplanen \(\text{Re}(s) > 1\) stemmer funktionen overens med summen af den absolut konvergente række \(\sum_{n=1}^{\infty} n^{-s}\), men funktionen kan defineres for alle \(s \in \mathbb{C} \setminus \{0\}\).</p>
+	<p> </p>-->
+
+	<h1>Medlemskab</h1>
+	<p>Hvis du ønsker at melde dig ind i foreningen, skal du henvende dig til et bestyrelsesmedlem (helst kassereren). Prisen for et medlemskab er 50,- kr., og medlemskabet gælder i det indeværende bestyrelsesår (21/22).</p>
+
+	<p>Pengene går hovedsageligt til kaffe, te og kage til foredragene.</p>
+
+	<h1>Bestyrelsen</h1>
+	<p>Vores bestyrelse består i 21/22 af:</p>
+	<p><b>Formand:</b> Tobias Toft Overgaard</p>
+	<p><b>Kasserer:</b> Maiken Balman Gravgaard</p>
+	<p><b>Menig:</b> Søren Kjærsgaard</p>
+	<p><b>Menig:</b> Martin Berker</p>
+	<p><b>Menig:</b> Simon Dohn</p>
+
+	<p>Bestyrelsen kan kontaktes på \(\texttt{eule}\texttt{r@i}\texttt{mf.a}\texttt{u.dk}\).</p>
+
+	<h1>Formalia</h1>
+	<p>&raquo; <a href="vedtaegter.pdf">Vedtægter</a></p>
+</div>
+</body>
+</html>
